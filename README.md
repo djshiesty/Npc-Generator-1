@@ -1,42 +1,57 @@
 # Npc-Generator-1
 
-Here is a README template, including lots of Markdown syntax. 
-Pick and choose whatever you want from the below template. No need to use everything! 
+This is the README in my repository for my project that I have created.
 
-> *Your README reflects the quality of your software — make it shine!*
+## Table of Contents
 
-## 📚 Table of Contents
-
-- 🌟 [Features](#-features)
-- 📜 [Overview](#-overview)
-- 👨‍💻 [Authors](#-authors)
-- 💻 [Code Example](#-code-example)
-- 📦 [Installation](#-installation)
-   - [🛠 Requirements](#-requirements)
-- 🤝[Feedback and Contributing](#feedback-and-contributing)
-
-## 🌟 Features
-
-*Key highlights of your program. Keep it brief!*
-
-- Feature 1: such what your program accomplishes, or outputs for the user.
-- Feature 2: such as how it saves time, or improves a specific task.
-- Feature 3: such as how it handles errors, or keeps data secure.
+- [Overview](#overview)
+- [Features](#features)
+- [My background](#my-background)
+- [An example of my code](#an-example-of-my-code)
+- [Feedback and Contributing](#feedback-and-contributing)
 
 ## Overview
 
-A concise paragraph explaining the purpose of your program, its use cases, and the motivation behind creating it. 
-You can also include a link to a demo video here.
+*A brief description of my program.*
 
-### Who am I
+This is a python program which generates NPCs (Non playable characters) based on the inputs the user provides and randomly generated 
+options inside of a list. The inputs specifically ask for each characters name and age, weight, and height ranges, along with a 
+statement asking them whether if the NPCs have a pet or not. Alongside that, two atributes (Hair color and clothing) and randomly generated
+from a prewriten list. It should also be important to note that these ranges randomly select a single value from the given input. Each 
+atribute and input is individual to each NPC character, where they print out in designated rows.
 
-A brief introduction about yourself, along with a link to your [GitHub](https://github.com) or personal website.
+
+## Features
+
+*Key highlights of my program.*
+
+- Feature 1: Outputs: The program gives you an outcome based on an input, and random selections from either inputted ranges or pre-written
+  lists.
+- Feature 2: Conveniences: The program makes it more convenient to write down large arrays of different NPC characters, where you can decide
+  how many characters you wish to generate and what exactly you want in each of them. After writing down on all of the inputs, they print out
+  in a neat, orderly list.
+- Feature 3: Error handling: One of the features I added that saved a lot of hassle was solving the capitalization issue in my boolean portion
+  of the program. Whenever I typed in an input that wasnt capitalized properly, it rendered it as 'False', which bugged me for a while.
+  However, I found out that adding a '.upper()' after stating the variable name (for the input) when making a detection system for 'True' or
+  'False' helped solve the problem immediately. This helped the program run a bit easier and allowed for more flexibility in user inputting.
 
 
-## An Example of my code
+## My background
 
-*This code example demonstrates a main feature of my code, where I create a variable
+*A brief description about myself.*
 
+I am a highschool student from the United States who has a passion for coding and technological software. Computer Science is a very
+interesting topic to me; its very cool to see how a bunch of binary numbers can create an advanced software capable of changing our lives,
+such as artifical intelligence, or the internet. I really enjoy coding and learning new things about this amazing field of industry
+and innovation. It intrigues me to understand more about computer science and its endless aspects and utilitarian features included.
+
+## An example of my code
+
+*This code example demonstrates a main feature of my code, where I created a variable for the number of characters that the user wants,
+and another one (i) to implement in my 'for' loop. I then created an input statement where the user writes down the NPC characters name,
+and the code appends the input to a priorly made list where it marks down the given name of that specific character.*
+
+```python
 num_character=int(input("How many characters are required?:"))
 print(num_character)
 i=0
@@ -44,40 +59,9 @@ i=0
 for i in range(num_character):
     print("What is character name for",i+1)
     npcnamelist.append(str(input()))
+```
 
-
-## 📦 Installation
-
-1. **Fork the repo** on GitHub.
-2. **Clone your fork**:
-
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/my-awesome-program.git
-   ```
-
-3. **Install dependencies** (if any):
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-That’s it!
-
-### 🛠 Requirements
-
-- Minimum operating system: Specify OS (e.g., Windows, macOS, Linux)
-- Language version: Specify version (e.g., Python 3.6+)
-
-## 🤝 Feedback and Contributing
-
-If your code is public and open source, let the community know! Please follow these steps to get involved:
-
-1. Fork the repository.
-2. Create a new branch.
-3. Make your changes.
-4. Submit a pull request.
+## Feedback and Contributing
 
 For any feedback or questions, feel free to reach out!
 
----- 
-*Created by Mr Harrell*
