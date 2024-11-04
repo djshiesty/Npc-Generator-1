@@ -32,15 +32,19 @@ You can also include a link to a demo video here.
 
 A brief introduction about yourself, along with a link to your [GitHub](https://github.com) or personal website.
 
+
 ## An Example of my code
 
-*Demonstrate a main feature or output of your software in action!*
+*This code example demonstrates a main feature of my code, where I create a variable
 
-```python
->>> import mypackage
->>> mypackage.do_stuff()
-'Oh yeah!'
-```
+num_character=int(input("How many characters are required?:"))
+print(num_character)
+i=0
+
+for i in range(num_character):
+    print("What is character name for",i+1)
+    npcnamelist.append(str(input()))
+
 
 ## 📦 Installation
 
