@@ -15,10 +15,10 @@ This is the README in my repository for my project that I have created.
 *A brief description of my program.*
 
 This is a python program which generates NPCs (Non playable characters) based on the inputs the user provides and randomly generated 
-options inside of a list. The inputs specifically ask for each characters name and age, weight, and height ranges, along with a 
-statement asking them whether if the NPCs have a pet or not. Alongside that, two atributes (Hair color and clothing) and randomly generated
-from a prewriten list. It should also be important to note that these ranges randomly select a single value from the given input. Each 
-atribute and input is individual to each NPC character, where they print out in designated rows.
+options inside of a list. The inputs specifically ask for each characters name and age, weight, and height ranges, along with a statement
+asking them whether if the NPCs have a pet or not. Alongside that, two atributes (Hair color and clothing) and randomly generated from a 
+prewriten list. It should also be important to note that these ranges randomly select a single value from the given input. Each atribute and 
+input is individual to each NPC character, where they print out in designated rows.
 
 
 ## Features
@@ -30,10 +30,10 @@ atribute and input is individual to each NPC character, where they print out in 
 - Feature 2: Conveniences: The program makes it more convenient to write down large arrays of different NPC characters, where you can decide
   how many characters you wish to generate and what exactly you want in each of them. After writing down on all of the inputs, they print out
   in a neat, orderly list.
-- Feature 3: Error handling: One of the features I added that saved a lot of hassle was solving the capitalization issue in my boolean portion
-  of the program. Whenever I typed in an input that wasnt capitalized properly, it rendered it as 'False', which bugged me for a while.
-  However, I found out that adding a '.upper()' after stating the variable name (for the input) when making a detection system for 'True' or
-  'False' helped solve the problem immediately. This helped the program run a bit easier and allowed for more flexibility in user inputting.
+- Feature 3: Error handling: One of the features I added that was to force the user to add an integer for the number of NPC characters that
+  they want to generate. In the code, I used a 'while True' loop to make sure the program doesn't stop after error detection, where I added a
+  'try' and 'except' statement to allow the program to detect errors in the code, specifically strings or floats. I added an else statement as
+  well to force the program to continue once the requirements were met and there were no errors, breaking the loop at the end.
 
 
 ## My background
@@ -42,18 +42,25 @@ atribute and input is individual to each NPC character, where they print out in 
 
 I am a highschool student from the United States who has a passion for coding and technological software. Computer Science is a very
 interesting topic to me; its very cool to see how a bunch of binary numbers can create an advanced software capable of changing our lives,
-such as artifical intelligence, or the internet. I really enjoy coding and learning new things about this amazing field of industry
-and innovation. It intrigues me to understand more about computer science and its endless aspects and utilitarian features included.
+such as artifical intelligence, or the internet. I really enjoy coding and learning new things about this amazing field of industry and 
+innovation. It intrigues me to understand more about computer science and its endless aspects and utilitarian features included.
 
 ## An example of my code
 
-*This code example demonstrates a main feature of my code, where I created a variable for the number of characters that the user wants,
-and another one (i) to implement in my 'for' loop. I then created an input statement where the user writes down the NPC characters name,
-and the code appends the input to a priorly made list where it marks down the given name of that specific character.*
+*This code example demonstrates a main feature of my code, where I created a variable (and error handling system) for the number of characters
+that the user wants, and another one (i) to implement in my 'for' loop. I then created an input statement where the user writes down the NPC
+characters name, and the code appends the input to a priorly made list where it marks down the given name of that specific character.*
 
 ```python
-num_character=int(input("How many characters are required?:"))
-print(num_character)
+while True:
+    try:
+        num_character=int(input("How many characters are required?:"))
+    except ValueError:
+        print("Please enter a valid integer value")
+        continue
+    else:
+        print(num_character)
+        break
 i=0
 
 for i in range(num_character):
