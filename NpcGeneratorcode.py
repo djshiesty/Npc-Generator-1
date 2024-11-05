@@ -14,8 +14,16 @@ petoptionlist=["Dog","Cat","Parrot","Fish","Hamster","Turtle","Rabbit","Snake"]
 import random
 
 #Asking the user for the number of characters he wants to generate and defining 2 variables used for the characters.
-num_character=int(input("How many characters are required?:"))
-print(num_character)
+#Error Handling added for an invalid input
+while True:
+    try:
+        num_character=int(input("How many characters are required?:"))
+    except ValueError:
+        print("Please enter a valid integer value")
+        continue
+    else:
+        print(num_character)
+        break
 i=0
 j=0
 
@@ -39,9 +47,16 @@ for i in range(num_character):
     npchaircolorlist.append(random.choice(coloroptionlist))
 
 #Printing the final character atributes.
+
+
 for j in range(num_character):
     print("\n","Character name:",npcnamelist[j],"\t","Character age:",npcagelist[j],"\t","Character height:",npcheightlist[j],"\t","Character weight:",npcweightlist[j],"\t","Character pet:",npcpetlist[j],"\t","Character hair color:",npchaircolorlist[j],"\t","Character clothing:",npcclothinglist[j])
+#Opening a file and storing a simple message
+f = open("chardef.txt", "w")
+new_message = "Generated character values: " + str(num_character)
+f.write(new_message)
+f.close()
 
-
-
+f = open("chardef.txt", "r")
+print(f.read())
 
